@@ -9,7 +9,7 @@ CREATE TABLE edusign (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER NOT NULL,
     created_at DATETIME NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES user(user_id)
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
 -- Requetes premier niveau
