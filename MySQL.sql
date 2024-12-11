@@ -75,6 +75,14 @@ FROM edusign
 GROUP BY created_at;
 
 -- 2
+
+-- solution 1:
 SELECT count(*) AS volume
 FROM edusign
 WHERE user_id = (SELECT user_id FROM users WHERE firstname = 'Bella');
+
+-- solution 2
+SELECT count(*) AS volume
+FROM edusign
+INNER JOIN users ON edusign.user_id=users.user_id
+WHERE firstname = 'Bella'
