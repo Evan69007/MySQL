@@ -6,6 +6,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE edusign (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER NOT NULL,
     created_at DATETIME NOT NULL,
     FOREIGN KEY (user_id) REFERENCES user(user_id)
@@ -67,7 +68,7 @@ SELECT *
 FROM edusign
 WHERE created_at = '2024-05-30 09:30:00';
 
--- Requetes 3èeme Niveau
+-- Requetes 3ème Niveau
 
 -- 1
 SELECT created_at, count(*)
